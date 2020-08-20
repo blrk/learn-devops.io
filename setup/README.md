@@ -134,7 +134,6 @@ blrk@devops:~/vagrant-vms$ vagrant destroy
 ==> default: Forcing shutdown of VM...
 ==> default: Destroying VM and associated drives...
 ```
-https://github.com/blrk/learn-devops.io/wiki
 
 [Back to the mainpage](https://github.com/blrk/learn-devops.io/wiki)
 
