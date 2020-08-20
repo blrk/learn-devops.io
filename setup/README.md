@@ -3,11 +3,12 @@
 * VMs are provisioned on top of VirtualBox, VMware,or cloud(AWS)
 * Works in other virtualization software providers.
 * Vagrant is good for developers that isolates machine dependencies and their configurations within a single disposable, consistent environment irespective of your OS such as Linux, Mac OS X, or Windows, everyone will  have the same environment, against the same dependencies and configured the same way.
-### If yoy are doing it on a VM perform the following step (only for OpenSUSE Leap)
+### If yoy are doing it on a VM perform the following step in your host machine(only for OpenSUSE Leap)
 * To enable nesting permanently, enable the nested KVM module parameter in the /etc/modprobe.d/kvm_*.conf file, depending on your CPU:
 * For Intel CPUs, edit /etc/modprobe.d/kvm_intel.conf and add the following line:
-* 
-[To know more refer this link](https://doc.opensuse.org/documentation/leap/virtualization/single-html/book-virt/#sec-vt-installation-nested-vms) 
+* [OpenSUSE users refer this link](https://doc.opensuse.org/documentation/leap/virtualization/single-html/book-virt/#sec-vt-installation-nested-vms) 
+* [Centos users refer this link]( https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/virtualization_deployment_and_administration_guide/sect-nested_virt_setup)
+* [Ubuntu users refer this link](https://www.server-world.info/en/note?os=Ubuntu_18.04&p=kvm&f=8)
 ``` bash
 options kvm_intel nested=Y
 ```
