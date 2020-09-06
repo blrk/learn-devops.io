@@ -117,5 +117,14 @@ b22cd9e553d54b9e82c03e2c03792c58
 * admin -> configure -> give the new password -> click 'save' button
 * you will be logged out 
 * login again using admin username and password
-
-
+### Set the Java Home path in Jenkins
+* click on Jenkins -> select Manage jenkins
+* Select Global tool configuration -> under JDK
+* click 'ADD JDK' button
+* Give JDK Name: JAVA_HOME
+* JAVA_HOME path : paste the output of the following echo command
+``` bash
+echo $JAVA_HOME/
+/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-2.51.amzn1.x86_64
+```
+* Finally click the Save button
