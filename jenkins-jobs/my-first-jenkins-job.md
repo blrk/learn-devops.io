@@ -18,3 +18,4 @@ echo "Welcome to DevOps Class"
 * Build job can be seen in under 'Build History'
 * Click on the icon to see the output of the job
 
+[Back to the mainpage](https://github.com/blrk/learn-devops.io/wiki)
