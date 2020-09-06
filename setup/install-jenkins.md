@@ -111,5 +111,11 @@ b22cd9e553d54b9e82c03e2c03792c58
 ```
 * Paste the password you will land into the 'getting started page'
 * close that start page and click on 'start using jenkins' button
+* you will land in the following screen 
+![](https://github.com/blrk/learn-devops.io/blob/master/setup/img/jenkins.png)
+### Change the admin password
+* admin -> configure -> give the new password -> click 'save' button
+* you will be logged out 
+* login again using admin username and password
 
 
