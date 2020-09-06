@@ -89,6 +89,27 @@ echo $JAVA_HOME/
 wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
 rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
 
- yum install jenkins
+ yum install jenkins -y
 ```
+* check the status of jenkins service
+``` bash
+[root@ip-172-31-26-8 ~]# service jenkins status
+jenkins is stopped
+[root@ip-172-31-26-8 ~]# service jenkins start
+Starting Jenkins                                           [  OK  ]
+```
+### Open jenkins dashboard
+* in the browser type : http://public-ip-of-instance:8080
+* you get a default page that  gives the step to find the default password
+<pre>
+/var/lib/jenkins/secrets/initialAdminPassword
+</pre>
+* In the instance terminal run the following command and copy the password
+``` bash
+[root@ip-172-31-26-8 ~]# cat /var/lib/jenkins/secrets/initialAdminPassword
+b22cd9e553d54b9e82c03e2c03792c58
+```
+* Paste the password you will land into the 'getting started page'
+* close that start page and click on 'start using jenkins' button
+
 
