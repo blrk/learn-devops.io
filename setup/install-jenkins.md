@@ -128,3 +128,5 @@ echo $JAVA_HOME/
 /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-2.51.amzn1.x86_64
 ```
 * Finally click the Save button
+
+[Back to the mainpage](https://github.com/blrk/learn-devops.io/wiki)
