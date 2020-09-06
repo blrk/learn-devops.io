@@ -148,7 +148,6 @@ blrk@devops:~/vagrant-vms$ vagrant destroy
 ==> default: Destroying VM and associated drives...
 ```
 
-
 [Back to the mainpage](https://github.com/blrk/learn-devops.io/wiki)
 
 
