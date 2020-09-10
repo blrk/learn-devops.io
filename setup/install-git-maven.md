@@ -76,3 +76,5 @@ OS name: "linux", version: "3.10.0-327.el7.x86_64", arch: "amd64", family: "unix
 * Then click -> Apply -> Save
 * maven insatlled sucessfully 
 
+
+[Back to the mainpage](https://github.com/blrk/learn-devops.io/wiki)
