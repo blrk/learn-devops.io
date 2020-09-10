@@ -52,3 +52,17 @@ echo $M2
 echo $M2_HOME 
 /opt/apache-maven-3.6.3
 ```
+* check the maven version
+``` bash
+ mvn --version
+Apache Maven 3.6.3 (cecedd343002696d0abb50b32b541b8a6ba2883f)
+Maven home: /opt/apache-maven-3.6.3
+Java version: 1.8.0_262, vendor: Oracle Corporation, runtime: /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-0.el7_8.x86_64/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "3.10.0-327.el7.x86_64", arch: "amd64", family: "unix"
+```
+### Install Maven plugins in Jenkins
+* Jenkins -> Manage Jenkins -> Manage Plugins
+* select the Availble tab -> type "maven" in the search box
+* from the list select "Maven Integration" and  "Maven Invoker"
+* then click "Install without restart"
