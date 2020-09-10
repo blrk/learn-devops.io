@@ -8,6 +8,7 @@ yum install git -y
 * Jenkins -> Manage Jenkins -> Manage Plugins
 * select the Availble tab -> type "github" in the search box
 * In the list select "Github" then click "Install without Researt"
+* wait for the installation to complete
 * Jenkins -> Manage Jenkins -> Global Tool Configuration
 * Under 'git" -> change the Name as "github" 
 * then click Apply and Save
@@ -66,3 +67,12 @@ OS name: "linux", version: "3.10.0-327.el7.x86_64", arch: "amd64", family: "unix
 * select the Availble tab -> type "maven" in the search box
 * from the list select "Maven Integration" and  "Maven Invoker"
 * then click "Install without restart"
+* wait for the installation to complete
+* Jenkins -> Manage Jenkins -> Global Tool Configuration
+* Under Maven 
+* uncheck Install automatically
+* Name -> M2_HOME
+* MAVEN_HOME	 -> /opt/apache-maven-3.6.3
+* Then click -> Apply -> Save
+* maven insatlled sucessfully 
+
