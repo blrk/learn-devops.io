@@ -12,4 +12,10 @@ yum install git -y
 * Under 'git" -> change the Name as "github" 
 * then click Apply and Save
 ### Install Maven
-
+* search "download maven" in Google -> open the first [link](https://maven.apache.org/download.cgi)
+* copy the link address of Binary tar.gz archive
+* open the terminal of Jenkins and perform the following steps
+``` bash
+cd /opt/
+wget https://downloads.apache.org/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
+```
