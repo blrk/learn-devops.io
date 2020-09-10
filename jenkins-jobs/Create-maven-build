@@ -1,0 +1,5 @@
+### Create your first Maven Build
+* Jenkins -> New Item -> Enter an item name: DevOps-First-Maven-Build
+* Seelct -> Maven project
+* Then click -> Ok
+* 
