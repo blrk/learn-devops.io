@@ -18,4 +18,37 @@ yum install git -y
 ``` bash
 cd /opt/
 wget https://downloads.apache.org/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
+ls
+tar -xvzf apache-maven-3.6.3-bin.tar.gz 
+cd apache-maven-3.6.3
+ls
+```
+* set the Maven path
+* open the bash profile
+``` bash
+ vi ~/.bash_profile 
+```
+* Uner the Java path set the maven path
+``` bash
+M2_HOME=/opt/apache-maven-3.6.3
+M2=/opt/apache-maven-3.6.3/bin
+```
+* add the path info in the PATH variable
+``` bash
+PATH=$PATH:$HOME/bin:$JAVA_HOME:$M2_HOME:$M2
+```
+* check the path is set
+``` bash
+echo $M2
+```
+* The previous command did not show anything since bash script is not eecuted
+* run the following command
+``` bash
+source ~/.bash_profile 
+
+echo $M2
+/opt/apache-maven-3.6.3/bin
+
+echo $M2_HOME 
+/opt/apache-maven-3.6.3
 ```
