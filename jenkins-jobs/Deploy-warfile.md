@@ -36,7 +36,9 @@ drwxr-x---  5 root root 4096 Sep 12 01:33 host-manager
 drwxr-x---  5 root root 4096 Sep 12 01:33 manager
 drwxr-x---  3 root root 4096 Sep 12 01:33 ROOT
 ```
-  
+### Run the Job
+* Open Jenkins Dashboard
+* 
 
 
 
