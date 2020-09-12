@@ -38,7 +38,19 @@ drwxr-x---  3 root root 4096 Sep 12 01:33 ROOT
 ```
 ### Run the Job
 * Open Jenkins Dashboard
-* 
+* Click on "Build Now"
+* Build icon turns Blue
+* go to the command line of tomcat do the following steps
+``` bash
+ls -l
+total 12
+-rw-r----- 1 root root  163 Sep 12 06:18 index.jsp
+drwxr-x--- 3 root root 4096 Sep 12 06:18 META-INF
+drwxr-x--- 3 root root 4096 Sep 12 06:18 WEB-INF
+```
+* Now open the browser 
+* http://<public-ip-oftomcat-server>:8080/webapp
+ 
 
 
 
