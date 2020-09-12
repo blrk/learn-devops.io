@@ -90,5 +90,28 @@ Tomcat started.
 * Now click on the 'Manager App" button on the screen
 * you are denied the acces 
 * let us tweak the config now
+* you are already inside the bin directory of tomcat move one level up
+``` bash
+cd ..
+```
+* find the file context.xml it is located under webapps
+``` bash
+find webapps/ -name context.xml
+webapps/manager/META-INF/context.xml
+webapps/host-manager/META-INF/context.xml
+```
+* edit the file
+``` bash
+vi webapps/host-manager/META-INF/context.xml
+```
+* under the contxt config comment valve tag
+* the default setting only allow ypu to open from the localhost
+``` bash
+<!-- <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+         allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /> -->
+```
+
+
+
 
 
