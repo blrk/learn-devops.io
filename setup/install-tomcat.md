@@ -134,7 +134,32 @@ Using JRE_HOME:        /usr/lib/jvm/jre
 Using CLASSPATH:       /opt/apache-tomcat-8.5.57/bin/bootstrap.jar:/opt/apache-tomcat-8.5.57/bin/tomcat-juli.jar
 Tomcat started.
 ```
-
+* In ypur browser enter http:public-ip-of-tomcat-instance:8080
+* Click on the "Manager App" button this time it prompt for a username and password. 
+* As of now we don't have any username and password set let us do it now
+* find a file tomcat-users.xml
+```bash
+cd /opt
+find apache-tomcat-8.5.57 -name tomcat-users.xml
+apache-tomcat-8.5.57/conf/tomcat-users.xml
+```
+* open the file in vi editor
+* move to the end of the file
+* useres should be added under user's context 
+```bash
+<role rolename="manager-gui"/>
+ <role rolename="manager-script"/>
+ <role rolename="manager-jmx"/>
+ <role rolename="manager-status"/>
+ <user username="admin" password="admin" roles="manager-gui, manager-script, manager-jmx, manager-status"/>
+ <user username="deployer" password="deployer" roles="manager-script"/>
+ <user username="tomcat" password="s3cret" roles="manager-gui"/>
+```
+* move to the bin directory then stop and start the tomcat service
+```bash
+./shutdown.sh 
+./startup.sh 
+```
 
 
 
