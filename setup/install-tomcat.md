@@ -160,7 +160,11 @@ apache-tomcat-8.5.57/conf/tomcat-users.xml
 ./shutdown.sh 
 ./startup.sh 
 ```
-
+* In ypur browser enter http:public-ip-of-tomcat-instance:8080
+* Click on the "Manager App" button this time it prompt for a username and password. 
+* enter the username: tomcat, password: s3cret
+* After sucessfull login Tomcat Wen application Manger loaded
+* congratulations you have sucessfully configured Tomcat server
 
 
 
