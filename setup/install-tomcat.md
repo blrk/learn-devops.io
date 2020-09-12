@@ -13,10 +13,13 @@
 * Note : Windows users can use MobaXterm
 * (No need to convert the pem key file)
 * Linux users do the following steps
-``` bash chmod 400 DevOps-Class.pem ```
+``` bash 
+chmod 400 DevOps-Class.pem 
+```
 * Note : if ypu are using the existing key no need to change the permission continue with the next step
 ``` bash
-ssh -i DevOps-Class.pem ec2-user@public-ip-of-instance ```
+ssh -i DevOps-Class.pem ec2-user@public-ip-of-instance 
+```
 * switch to root user mode
 ```bash sudo su - ```
 
