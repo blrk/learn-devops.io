@@ -72,3 +72,23 @@ commons-daemon.jar            shutdown.bat      version.sh
 commons-daemon-native.tar.gz  shutdown.sh
 configtest.bat                startup.bat
 ```
+* you can find startup and shutdown scripts that is used to start and stop the server
+* start the tomcat server
+``` bash
+./startup.sh 
+Using CATALINA_BASE:   /opt/apache-tomcat-8.5.57
+Using CATALINA_HOME:   /opt/apache-tomcat-8.5.57
+Using CATALINA_TMPDIR: /opt/apache-tomcat-8.5.57/temp
+Using JRE_HOME:        /usr/lib/jvm/jre
+Using CLASSPATH:       /opt/apache-tomcat-8.5.57/bin/bootstrap.jar:/opt/apache-tomcat-8.5.57/bin/tomcat-juli.jar
+Tomcat started.
+```
+* to verify tomcat is running
+* copy the public ip of the tomcat instance and open the browser then pase your ip followed by port number 8080
+* http:public-ip-of-tomcat-instance:8080
+* you can see the default tomcat page
+* Now click on the 'Manager App" button on the screen
+* you are denied the acces 
+* let us tweak the config now
+
+
