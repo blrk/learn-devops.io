@@ -22,4 +22,23 @@ ssh -i DevOps-Class.pem ec2-user@public-ip-of-instance
 ```
 * switch to root user mode
 ```bash sudo su - ```
+### Download apache Tomcat
+* Search "apache tomcat downlad" in Google
+* open the first link
+* In the sidebar click on the link Tomcat 8. You will be redirected to Tomcat 8 Software Downloads
+* Scrool down under 8.5.57
+* locate a link tar.gz (pgp, sha512) copy the link (right click choose copy link address)
+* Go to the terminal of ec2 tomcat instance 
+* Switch to root user mode
+``` bash
+sudo su -
+```
+* open the location /opt
+``` bash
+cd /opt
+```
+* download tomcat in this location
+``` bash
+wget https://apachemirror.sg.wuchna.com/tomcat/tomcat-8/v8.5.57/bin/apache-tomcat-8.5.57.tar.gz
+```
 
