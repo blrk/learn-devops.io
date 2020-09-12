@@ -110,6 +110,30 @@ vi webapps/host-manager/META-INF/context.xml
 <!-- <Valve className="org.apache.catalina.valves.RemoteAddrValve"
          allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /> -->
 ```
+* repeat the same in the file webapps/manager/META-INF/context.xml
+``` bash
+vi webapps/manager/META-INF/context.xml
+```
+* Inorder to reflect the new configuration restart the tomcat server
+```bash
+cd bin/
+./shutdown.sh 
+Using CATALINA_BASE:   /opt/apache-tomcat-8.5.57
+Using CATALINA_HOME:   /opt/apache-tomcat-8.5.57
+Using CATALINA_TMPDIR: /opt/apache-tomcat-8.5.57/temp
+Using JRE_HOME:        /usr/lib/jvm/jre
+Using CLASSPATH:       /opt/apache-tomcat-8.5.57/bin/bootstrap.jar:/opt/apache-tomcat-8.5.57/bin/tomcat-juli.jar
+```
+* start the tomcat service
+```bash
+./startup.sh 
+Using CATALINA_BASE:   /opt/apache-tomcat-8.5.57
+Using CATALINA_HOME:   /opt/apache-tomcat-8.5.57
+Using CATALINA_TMPDIR: /opt/apache-tomcat-8.5.57/temp
+Using JRE_HOME:        /usr/lib/jvm/jre
+Using CLASSPATH:       /opt/apache-tomcat-8.5.57/bin/bootstrap.jar:/opt/apache-tomcat-8.5.57/bin/tomcat-juli.jar
+Tomcat started.
+```
 
 
 
