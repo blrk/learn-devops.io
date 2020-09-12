@@ -134,7 +134,7 @@ Using JRE_HOME:        /usr/lib/jvm/jre
 Using CLASSPATH:       /opt/apache-tomcat-8.5.57/bin/bootstrap.jar:/opt/apache-tomcat-8.5.57/bin/tomcat-juli.jar
 Tomcat started.
 ```
-* In ypur browser enter http:public-ip-of-tomcat-instance:8080
+* In your browser enter http:public-ip-of-tomcat-instance:8080
 * Click on the "Manager App" button this time it prompt for a username and password. 
 * As of now we don't have any username and password set let us do it now
 * find a file tomcat-users.xml
@@ -160,7 +160,7 @@ apache-tomcat-8.5.57/conf/tomcat-users.xml
 ./shutdown.sh 
 ./startup.sh 
 ```
-* In ypur browser enter http:public-ip-of-tomcat-instance:8080
+* In your browser enter http:public-ip-of-tomcat-instance:8080
 * Click on the "Manager App" button this time it prompt for a username and password. 
 * enter the username: tomcat, password: s3cret
 * After sucessfull login Tomcat Wen application Manger loaded
