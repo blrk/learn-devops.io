@@ -67,9 +67,25 @@ Description The origin server did not find a current representation for the targ
 Apache Tomcat/9.0.37
 ```
 ### Trouble shooting step
-``` 
+``` bash
+[root@docker-vm ~]# docker exec -it tomcat /bin/bash
 
+root@edbcbe2d7d05:/usr/local/tomcat# ls
+BUILDING.txt	 NOTICE		RUNNING.txt  lib	     temp	   work
+CONTRIBUTING.md  README.md	bin	     logs	     webapps
+LICENSE		 RELEASE-NOTES	conf	     native-jni-lib  webapps.dist
 
+root@edbcbe2d7d05:/usr/local/tomcat# ls webapps
+
+root@edbcbe2d7d05:/usr/local/tomcat# ls webapps.dist/
+ROOT  docs  examples  host-manager  manager
+
+root@edbcbe2d7d05:/usr/local/tomcat# cp -r webapps.dist/. webapps
+
+root@edbcbe2d7d05:/usr/local/tomcat# ls webapps
+ROOT  docs  examples  host-manager  manager
+```
+* Refresh the page you get the defualt page
 
 
 
