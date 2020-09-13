@@ -98,5 +98,11 @@ edbcbe2d7d05        tomcat:latest       "catalina.sh run"   5 minutes ago       
 [root@docker-vm ~]# docker rm -f edb
 edb
 ```
-
+### Running a specific version of tomat
+``` bash
+[root@docker-vm ~]# docker run -itd --name tomcat -p 8080:8080 tomcat:8.5
+[root@docker-vm ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                    NAMES
+078091f3ee31        tomcat:8.5          "catalina.sh run"   3 minutes ago       Up 3 minutes        0.0.0.0:8080->8080/tcp   tomcat
+```
 
