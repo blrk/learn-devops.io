@@ -49,7 +49,7 @@ drwxr-x--- 3 root root 4096 Sep 12 06:18 META-INF
 drwxr-x--- 3 root root 4096 Sep 12 06:18 WEB-INF
 ```
 * Now open the browser 
-* http://<public-ip-oftomcat-server>:8080/webapp
+* http://"<public-ip-oftomcat-server>":8080/webapp
  
 
 
