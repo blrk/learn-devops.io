@@ -42,11 +42,15 @@ drwxr-x---  3 root root 4096 Sep 12 01:33 ROOT
 * Build icon turns Blue
 * go to the command line of tomcat do the following steps
 ``` bash
-ls -l
-total 12
--rw-r----- 1 root root  163 Sep 12 06:18 index.jsp
-drwxr-x--- 3 root root 4096 Sep 12 06:18 META-INF
-drwxr-x--- 3 root root 4096 Sep 12 06:18 WEB-INF
+ls -ltr webapps/
+total 28
+drwxr-x---  3 root root 4096 Sep 12 05:48 ROOT
+drwxr-x--- 16 root root 4096 Sep 12 05:48 docs
+drwxr-x---  6 root root 4096 Sep 12 05:48 examples
+drwxr-x---  5 root root 4096 Sep 12 05:48 manager
+drwxr-x---  5 root root 4096 Sep 12 05:48 host-manager
+-rw-r-----  1 root root 2530 Sep 12 06:18 webapp.war
+drwxr-x---  4 root root 4096 Sep 12 06:18 webapp
 ```
 * Now open the browser 
 * http://\<public-ip-oftomcat-server>\:8080/webapp
