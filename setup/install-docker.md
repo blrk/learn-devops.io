@@ -84,8 +84,19 @@ root@edbcbe2d7d05:/usr/local/tomcat# cp -r webapps.dist/. webapps
 
 root@edbcbe2d7d05:/usr/local/tomcat# ls webapps
 ROOT  docs  examples  host-manager  manager
+
+root@edbcbe2d7d05:/usr/local/tomcat# exit
+exit
 ```
 * Refresh the page you get the defualt page
+* delete the latest container and run a specific version
+``` bash
+[root@docker-vm ~]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                    NAMES
+edbcbe2d7d05        tomcat:latest       "catalina.sh run"   5 minutes ago       Up 5 minutes        0.0.0.0:8080->8080/tcp   tomcat
 
+[root@docker-vm ~]# docker rm -f edb
+edb
+```
 
 
