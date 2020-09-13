@@ -75,7 +75,13 @@ PasswordAuthentication yes
 #PermitEmptyPasswords no
 ```
 * save the file
-
+* Reload the configuration
+``` bash
+[root@docker-vm ~]# service sshd reload
+Reloading sshd:                                            [  OK  ]
+```
+* Click the Test Configuration again
+* you will get a sucess message
 
 
 [Back to the mainpage](https://github.com/blrk/learn-devops.io/wiki)
