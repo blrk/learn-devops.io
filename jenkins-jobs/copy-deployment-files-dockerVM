@@ -23,4 +23,8 @@ maven-archiver  surefire  webapp  webapp.war
 [root@ip-172-31-26-8 target]# pwd
 /var/lib/jenkins/workspace/demo-tomcat/webapp/target
 ```
+* Source files : webapp/target/*.war
+* Remote directory : .
+* Click Apply and Save
+* Click on Build now
 
