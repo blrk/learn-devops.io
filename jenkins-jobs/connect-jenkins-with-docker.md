@@ -58,7 +58,23 @@ uid=501(msadmin) gid=501(msadmin) groups=501(msadmin),497(docker)
 * Passphrase / Password : Give the password of msadmin
 * finally click on the Test configuration Button
 * It will fail need to enable password based authentication
-
+* Go to the command line of Docker VM and do the following
+``` bash
+[root@docker-vm ~]# vi /etc/ssh/sshd_config 
+```
+* By default the setting disbaled password based login
+``` bash
+# EC2 uses keys for remote access
+PasswordAuthentication no
+#PermitEmptyPasswords no
+```
+* Change it to yes
+``` bash
+# EC2 uses keys for remote access
+PasswordAuthentication yes
+#PermitEmptyPasswords no
+```
+* save the file
 
 
 
