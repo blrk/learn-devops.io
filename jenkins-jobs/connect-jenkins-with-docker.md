@@ -82,6 +82,6 @@ Reloading sshd:                                            [  OK  ]
 ```
 * Click the Test Configuration again
 * you will get a sucess message
-
+* Click Apply and Save
 
 [Back to the mainpage](https://github.com/blrk/learn-devops.io/wiki)
