@@ -40,4 +40,6 @@ To https://github.com/blrk/devops-project.git
 (base) blrk@desktop:~/aws/devops-project/webapp/src/main/webapp> 
 ```
 * Go to the Jenkins dashboard and check the changes
+* Once the build is successfull you can open the tomcat server pages and see the modification
+* http://\<tomcat-server-public-ip\>:8080/webapp
 
