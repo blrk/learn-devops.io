@@ -23,7 +23,7 @@
 * ID: deployer_user
 * Now click Add
 * Then under Credentials Choose -> deployer/***
-* Tomcat URL : http://<public-ip-of-tomcat-server>:8080/
+* Tomcat URL : http://\<public-ip-of-tomcat-server>\:8080/
 ### Check the location of war file deployement 
 * ssh into Tomcat web server
 * open the following location
