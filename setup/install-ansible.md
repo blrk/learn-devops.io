@@ -165,7 +165,87 @@ exit
 [msadmin@ip-172-31-3-12 ansible]$ ls
 [msadmin@ip-172-31-3-12 ansible]$ 
 ```
+* Create host configuration
+``` bash
+sudo vi /etc/ansible/hosts
+```
+* add the following configuration
+``` bash
+# add docker vm's private ip
+172.31.11.1
+localhost
+```
+* perform a ping test using ansible
+``` bash
+[msadmin@ip-172-31-3-12 ~]$ ansible all -m ping
+/usr/local/lib/python2.7/site-packages/ansible/parsing/vault/__init__.py:44: CryptographyDeprecationWarning: Python 2 is no longer supported by the Python core team. Support for it is now deprecated in cryptography, and will be removed in a future release.
+  from cryptography.exceptions import InvalidSignature
+The authenticity of host 'localhost (127.0.0.1)' can't be established.
+ECDSA key fingerprint is SHA256:ZesNf8kvccZRHQ8t1D6gh0FdVLP7vQC/F4jaoYnvMmo.
+ECDSA key fingerprint is MD5:34:0a:1d:18:af:1c:c3:9e:20:0b:f2:11:43:9b:cd:6d.
+Are you sure you want to continue connecting (yes/no)? [WARNING]: Platform linux on host 172.31.11.1 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change this. See https://docs.ansible.com/ansible/2.9/referen
+ce_appendices/interpreter_discovery.html for more information.
+172.31.11.1 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
 
+localhost | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: Host key verification failed.", 
+    "unreachable": true
+}
+```
+* local is not reachable beacuse keys are not added
+* add the keys
+``` bash
+[msadmin@ip-172-31-3-12 ~]$ ssh-copy-id localhost
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/msadmin/.ssh/id_rsa.pub"
+The authenticity of host 'localhost (127.0.0.1)' can't be established.
+ECDSA key fingerprint is SHA256:ZesNf8kvccZRHQ8t1D6gh0FdVLP7vQC/F4jaoYnvMmo.
+ECDSA key fingerprint is MD5:34:0a:1d:18:af:1c:c3:9e:20:0b:f2:11:43:9b:cd:6d.
+Are you sure you want to continue connecting (yes/no)? yes
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+msadmin@localhost's password: 
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh 'localhost'"
+and check to make sure that only the key(s) you wanted were added.
+```
+* Do the ping test again
+``` bash
+[msadmin@ip-172-31-3-12 ~]$ ansible all -m ping
+/usr/local/lib/python2.7/site-packages/ansible/parsing/vault/__init__.py:44: CryptographyDeprecationWarning: Python 2 is no longer supported by the Python core team. Support for it is now deprecated in cryptography, and will be removed in a future release.
+  from cryptography.exceptions import InvalidSignature
+[WARNING]: Platform linux on host 172.31.11.1 is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change this. See https://docs.ansible.com/ansible/2.9/referen
+ce_appendices/interpreter_discovery.html for more information.
+172.31.11.1 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+[WARNING]: Platform linux on host localhost is using the discovered Python
+interpreter at /usr/bin/python, but future installation of another Python
+interpreter could change this. See https://docs.ansible.com/ansible/2.9/referen
+ce_appendices/interpreter_discovery.html for more information.
+localhost | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+```
 
 
 
