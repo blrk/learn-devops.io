@@ -18,6 +18,18 @@ ssh -i DevOps-Class.pem ec2-user@public-ip-of-instance
 ``` bash
 sudo su -
 ```
-
+### Install python
+``` bash
+ yum install python -y
+```
+* check the version of the python installed
+``` bash
+[root@ip-172-31-21-116 ~]# python --version
+Python 2.7.18
+```
+*
+``` bash
+yumm install python-pip -y
+```
 
 [Back to the mainpage](https://github.com/blrk/learn-devops.io/wiki)
