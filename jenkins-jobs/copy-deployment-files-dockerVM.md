@@ -47,7 +47,7 @@ vi Dockerfile
 ``` bash
 FROM tomcat:latest
 MAINTAINER blrk
-COPY ./webapp /usr/local/tomcat/webapps
+COPY ./webapp.war /usr/local/tomcat/webapps
 ```
 * save this file 
 ### Build a Docker Image
@@ -79,6 +79,7 @@ tomcat              latest              5f47aad0b70e        5 days ago          
 38348723cee1c4b6b5237eeec8b240e29c4149d015ac43f220bab2e55fa9e43e
 ```
 * check the deployment 
-* 
+* Open a tab in the broowser : http://\<public-ip-of-docker-vm\>:8080/webapp
+* If you are able to see the jsp page deployment successful 
 
 [Back to the mainpage](https://github.com/blrk/learn-devops.io/wiki)
