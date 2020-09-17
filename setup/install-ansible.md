@@ -49,6 +49,11 @@ useradd msadmin
 passwd msadmin
 ```
 * add ansible user to the sudeoers file
+* Note : copy and paste
+```  bash
+echo "msadmin	ALL=(ALL)       NOPASSWD: ALL" >> /etc/sudoers
+```
+
 
 
 
