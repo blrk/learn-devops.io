@@ -53,6 +53,18 @@ passwd msadmin
 ```  bash
 echo "msadmin	ALL=(ALL)       NOPASSWD: ALL" >> /etc/sudoers
 ```
+### Install Docker Server
+``` bash
+yum install docker -y
+```
+* Checking the docker service and start
+``` bash
+[root@ip-172-31-3-12 ~]# service docker status
+docker is stopped
+[root@ip-172-31-3-12 ~]# service docker start
+Starting cgconfig service:                                 [  OK  ]
+Starting docker:	.                                  [  OK  ]
+```
 
 
 
