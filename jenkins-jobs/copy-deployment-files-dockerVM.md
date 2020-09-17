@@ -49,6 +49,22 @@ FROM tomcat:latest
 MAINTAINER blrk
 COPY ./webapp /usr/local/tomcat/webapps
 ```
+* save this file 
+### Build a Docker Image
+* Run the following command to create a docker image
+``` bash
+docker build -t devops-demo .
+Sending build context to Docker daemon  11.78kB
+Step 1/3 : FROM tomcat:latest
+ ---> 5f47aad0b70e
+Step 2/3 : MAINTAINER blrk
+ ---> Running in c96e1fa8d578
+Removing intermediate container c96e1fa8d578
+ ---> 736777219654
+Step 3/3 : COPY ./webapp /usr/local/tomcat/webapps
+ ---> 92cb1e2dba03
+Successfully built 92cb1e2dba03
+```
 
 
 
