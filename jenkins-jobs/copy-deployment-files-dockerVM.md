@@ -42,7 +42,7 @@ webapp
 ```
 * Create a Docker file in the home directory of msadmin
 ``` bash
-vi dockerfile
+vi Dockerfile
 ```
 ``` bash
 FROM tomcat:latest
@@ -65,7 +65,20 @@ Step 3/3 : COPY ./webapp /usr/local/tomcat/webapps
  ---> 92cb1e2dba03
 Successfully built 92cb1e2dba03
 ```
-
-
+* list the images to see the newly created image
+``` bash
+[msadmin@ip-172-31-11-1 ~]$ docker image ls
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+devops-demo         latest              92cb1e2dba03        2 minutes ago       647MB
+tomcat              8.5                 34aaa1851899        5 days ago          530MB
+tomcat              latest              5f47aad0b70e        5 days ago          647MB
+```
+### Create container from the image
+``` bash
+[msadmin@ip-172-31-11-1 ~]$ docker run -d --name devops-demo -p 8080:8080 devops-demo
+38348723cee1c4b6b5237eeec8b240e29c4149d015ac43f220bab2e55fa9e43e
+```
+* check the deployment 
+* 
 
 [Back to the mainpage](https://github.com/blrk/learn-devops.io/wiki)
