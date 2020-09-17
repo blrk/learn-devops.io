@@ -20,3 +20,7 @@ ed207966982a        devops-demo-jenkins   "catalina.sh run"   2 minutes ago     
 ```
 * open the browser and enter : http://\<public-ip-of-docker-vm\>:8080/webapp
 * If you are able to see the contents of your JSP file experiment is successful 
+### Edit the code on github code repo
+* try to build the same job once again
+* What happens? is your job is failing?
+* How to find a solution let us discuss in the next ... 
