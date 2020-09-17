@@ -27,5 +27,29 @@ maven-archiver  surefire  webapp  webapp.war
 * Remote directory : .
 * Click Apply and Save
 * Click on Build now
+### Create a Docker file 
+* In the previous steps you have copied the deployment files to the docker host
+* Now login into the Docker host 
+* Switch over as msadmin user
+``` bash
+sudo su -
+sudo su - msadmin
+```
+* Next run ls command to verify that the deployment files are copied. 
+``` bash
+[msadmin@ip-172-31-11-1 ~]$ ls
+webapp
+```
+* Create a Docker file in the home directory of msadmin
+``` bash
+vi dockerfile
+```
+``` bash
+FROM tomcat:latest
+MAINTAINER blrk
+COPY ./webapp /usr/local/tomcat/webapps
+```
+
+
 
 [Back to the mainpage](https://github.com/blrk/learn-devops.io/wiki)
