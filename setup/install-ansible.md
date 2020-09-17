@@ -27,9 +27,29 @@ sudo su -
 [root@ip-172-31-21-116 ~]# python --version
 Python 2.7.18
 ```
-*
+* Install the python package manager
 ``` bash
-yumm install python-pip -y
+yum install python-pip -y
 ```
+### Install Ansible
+``` bash
+pip install ansible 
+```
+* Check the version of the ansible 
+``` bash
+ansible --version
+```
+* Create a ansible directory under /etc
+``` bash
+mkdir /etc/ansible
+```
+* Create ansible user
+``` bash
+useradd msadmin
+passwd msadmin
+```
+* add ansible user to the sudeoers file
+
+
 
 [Back to the mainpage](https://github.com/blrk/learn-devops.io/wiki)
