@@ -52,10 +52,16 @@ drwxr-xr-x 2 msadmin msadmin 4096 Sep 18 10:35 docker
 * Click on Add-post Buid Action button
 * Select "send build artifacts over SSH"
 * Name select : Ansible_Server
-
-* 
-
-
-
+* Source files  : webapp/target/*.war
+* Remove prefix : webapp/target/
+* Remote directory : //opt//docker
+* Note : additonal / used for escape
+### connect to the terminal of Ansible server
+* login as msadmin and list the contents of /opt/docker
+``` bash
+[msadmin@ip-172-31-3-12 ~]$ ls /opt/docker/
+webapp.war
+```
+* If you get the above output you have sucessfully copied the files 
 
 [Back to the mainpage](https://github.com/blrk/learn-devops.io/wiki)
