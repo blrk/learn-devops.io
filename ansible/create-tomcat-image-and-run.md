@@ -6,6 +6,10 @@
 Password: 
 Last login: Mon Sep 21 04:50:05 UTC 2020 on pts/0
 [msadmin@ip-172-31-3-12 ~]$ 
+
+[msadmin@ip-172-31-3-12 ~]$ cd /opt/docker/
+[msadmin@ip-172-31-3-12 docker]$ ls
+webapp.war
 ```
 * check the contents of the /opt/docker 
 ``` bash
@@ -27,6 +31,7 @@ COPY ./webapp.war /usr/local/tomcat/webapps
 ``` bash
 vi create-tomcat-image-and-run.yml
 ```
+* add the following configuration
 ``` yaml
 ---
 - hosts: all
@@ -39,5 +44,25 @@ vi create-tomcat-image-and-run.yml
   - name: create container using the above created image
     command: docker run -d --name devops-website -p 8080:8080 DevOps-website-image  
 ```
+* Check any container are running 
+``` bash
+[msadmin@ip-172-31-3-12 ~]$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+```
+* Check any images are there 
+``` bash
+[msadmin@ip-172-31-3-12 ~]$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+```
+* Create an inventory file
+``` bash
+[msadmin@ip-172-31-3-12 docker]$ vi ansible-hosts
+```
+* add the following content
+``` bash
+localhost
+```
+
+
 
 
