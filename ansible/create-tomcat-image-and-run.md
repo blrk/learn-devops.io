@@ -33,7 +33,7 @@ vi create-tomcat-image-and-run.yml
 ---
 - hosts: all
 
-- tasks:
+  tasks:
   - name: build tomcat image to deploy a  war file
     command: docker build -t DevOps-website-image .
     args:
@@ -58,6 +58,29 @@ REPOSITORY          TAG                 IMAGE ID            CREATED             
 * add the following content
 ``` bash
 localhost
+```
+* check the playbook
+``` bash
+[msadmin@ip-172-31-3-12 docker]$ ansible-playbook -i ansible-hosts create-tomcat-image-and-run.yml --check
+/usr/local/lib/python2.7/site-packages/ansible/parsing/vault/__init__.py:44: CryptographyDeprecationWarning: Python 2 is no longer supported by the Python core team. Support for it is now deprecated in cryptography, and will be removed in a future release.
+  from cryptography.exceptions import InvalidSignature
+
+PLAY [all] *****************************************************************************************************
+
+TASK [Gathering Facts] *****************************************************************************************
+[WARNING]: Platform linux on host localhost is using the discovered Python interpreter at /usr/bin/python, but
+future installation of another Python interpreter could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+ok: [localhost]
+
+TASK [build tomcat image to deploy a  war file] ****************************************************************
+skipping: [localhost]
+
+TASK [create container using the above created image] **********************************************************
+skipping: [localhost]
+
+PLAY RECAP *****************************************************************************************************
+localhost                  : ok=1    changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
 ```
 
 
