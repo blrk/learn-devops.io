@@ -6,14 +6,11 @@
 Password: 
 Last login: Mon Sep 21 04:50:05 UTC 2020 on pts/0
 [msadmin@ip-172-31-3-12 ~]$ 
-
-[msadmin@ip-172-31-3-12 ~]$ cd /opt/docker/
-[msadmin@ip-172-31-3-12 docker]$ ls
-webapp.war
 ```
 * check the contents of the /opt/docker 
 ``` bash
-[msadmin@ip-172-31-3-12 ~]$ ls /opt/docker/
+[msadmin@ip-172-31-3-12 ~]$ cd /opt/docker/
+[msadmin@ip-172-31-3-12 docker]$ ls
 webapp.war
 ```
 * Create a Dockerfile
@@ -62,6 +59,7 @@ REPOSITORY          TAG                 IMAGE ID            CREATED             
 ``` bash
 localhost
 ```
+
 
 
 
