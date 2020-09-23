@@ -28,3 +28,5 @@ CONTAINER ID        IMAGE                  COMMAND             CREATED          
 ### Wait for the next build
 * open the Jnekins dashboard and wait for the build result 
 * New build will fail beacuse already a container is running with the same name
+
+[Back to the mainpage](https://github.com/blrk/learn-devops.io/wiki)
