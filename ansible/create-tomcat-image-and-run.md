@@ -20,7 +20,7 @@ vi Dockerfile
 ``` bash
 FROM tomcat:latest
 
-MAINTAINER: blrk
+MAINTAINER blrk
 
 COPY ./webapp.war /usr/local/tomcat/webapps
 ```
@@ -35,11 +35,11 @@ vi create-tomcat-image-and-run.yml
 
   tasks:
   - name: build tomcat image to deploy a  war file
-    command: docker build -t DevOps-website-image .
+    command: docker build -t devops-website-image .
     args:
       chdir: /opt/docker
   - name: create container using the above created image
-    command: docker run -d --name devops-website -p 8080:8080 DevOps-website-image  
+    command: docker run -d --name devops-website -p 8080:8080 devops-website-image  
 ```
 * Check any container are running 
 ``` bash
@@ -82,8 +82,41 @@ skipping: [localhost]
 PLAY RECAP *****************************************************************************************************
 localhost                  : ok=1    changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
 ```
-*   
+*  Run the Ansible playbook
+``` bash
+[msadmin@ip-172-31-3-12 docker]$ ansible-playbook -i ansible-hosts create-tomcat-image-and-run.yml 
+/usr/local/lib/python2.7/site-packages/ansible/parsing/vault/__init__.py:44: CryptographyDeprecationWarning: Python 2 is no longer supported by the Python core team. Support for it is now deprecated in cryptography, and will be removed in a future release.
+  from cryptography.exceptions import InvalidSignature
 
+PLAY [all] *****************************************************************************************************
 
+TASK [Gathering Facts] *****************************************************************************************
+[WARNING]: Platform linux on host localhost is using the discovered Python interpreter at /usr/bin/python, but
+future installation of another Python interpreter could change this. See
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for more information.
+ok: [localhost]
 
+TASK [build tomcat image to deploy a  war file] ****************************************************************
+changed: [localhost]
 
+TASK [create container using the above created image] **********************************************************
+changed: [localhost]
+
+PLAY RECAP *****************************************************************************************************
+localhost                  : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+```
+* list all the images
+``` bash
+[msadmin@ip-172-31-3-12 docker]$ docker images
+REPOSITORY             TAG                 IMAGE ID            CREATED             SIZE
+devops-website-image   latest              d34ea790f188        2 minutes ago       647MB
+tomcat                 latest              f796d3d2c195        7 days ago          647MB
+```
+* list all the containers
+``` bash
+[msadmin@ip-172-31-3-12 docker]$ docker ps -a
+CONTAINER ID        IMAGE                  COMMAND             CREATED             STATUS              PORTS                    NAMES
+03ba2f759c8f        devops-website-image   "catalina.sh run"   15 seconds ago      Up 14 seconds       0.0.0.0:8080>8080/tcp   devops-website
+```
+
+[Back to the mainpage](https://github.com/blrk/learn-devops.io/wiki)
