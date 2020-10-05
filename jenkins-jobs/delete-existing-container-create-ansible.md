@@ -49,3 +49,4 @@ ansible-playbook -i /opt/docker/ansible-host /opt/docker/re-create-tomcat-image-
 * Now the ansible server is capable of handling the problem I discussed in t he begining 
 * ansible automatically create a website with the new content 
 
+[Back to the mainpage](https://github.com/blrk/learn-devops.io/wiki)
