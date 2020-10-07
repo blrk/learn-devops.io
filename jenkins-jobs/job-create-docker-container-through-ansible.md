@@ -37,5 +37,9 @@ CONTAINER ID        IMAGE                       COMMAND             CREATED     
 * Note : docker container is up and running
 * verify the status of the application
 * open a new tab in the browser and type : http://\<public-ip-of-docker-vm\>:8080/webapp/
+### Modify the Jenkins Job
+* Login to the Jenkins dashboard
+* Create a new hob : Deploy_on_Docker_Target_using_Ansible
+* Copy from : Deploy-on-Docker-through-Ansible
 
 
