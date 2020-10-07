@@ -41,5 +41,19 @@ CONTAINER ID        IMAGE                       COMMAND             CREATED     
 * Login to the Jenkins dashboard
 * Create a new hob : Deploy_on_Docker_Target_using_Ansible
 * Copy from : Deploy-on-Docker-through-Ansible
+* Move to the Post-build Actions
+* change the Exec command as the following
+``` bash
+ansible-playbook -i /opt/docker/ansible-host  /opt/docker/create-tomcat-image.yml --limit localhost; 
 
+ansible-playbook -i /opt/docker/target-host /opt/docker/run-container-in-target.yml 
+```
+* Click on Apply and Save
+* Wait for the build to happen automatically 
+* check the docker hub, docker host 
+* Access the web page : http://\<public-ip-of-docker-vm\>:8080/webapp/
+
+##### Hurray! You have successfully implemented the CI/CD pipeline
+
+[Back to the mainpage](https://github.com/blrk/learn-devops.io/wiki)
 
