@@ -46,5 +46,6 @@ deployment.apps "kits-deployment" deleted
 kubectl delete service kits-service
 service "kits-service" deleted
 ```
+[Back to the mainpage](https://github.com/blrk/learn-devops.io/wiki)
 
 
