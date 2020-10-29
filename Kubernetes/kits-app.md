@@ -34,4 +34,17 @@ kits-deployment-8674dd7bd7-d5gf5   1/1     Running   0          13m
 ### Access the webpage running in pods
 * Edit the security rules and and allow the port used 
 * open a browser tab and in the address filed enter : http://\<public-ip-of-masternode\>:31200/webapp
-* 
+* If you are able to see your website you are good to go
+### Manage service and deployemnt
+* delete the deployment
+``` bash
+kubectl delete deployment kits-deployment 
+deployment.apps "kits-deployment" deleted
+```
+* delete the service
+``` bash
+kubectl delete service kits-service
+service "kits-service" deleted
+```
+
+
