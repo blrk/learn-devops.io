@@ -1,4 +1,35 @@
 ### Create deployment and service using yaml files
+* login to k8-management server
+* Switch as root user
+``` bash
+sudo su -
+```
+* ssh to master node of the cluster
+``` bash
+ubuntu@k8-m-server:~$ sudo su -
+root@k8-m-server:~# ssh -i .ssh/id_rsa ubuntu@api.demo.k8s.karunya.edu
+Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-1028-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Wed Nov  4 15:20:49 UTC 2020
+
+  System load:  0.04              Processes:                164
+  Usage of /:   6.5% of 61.98GB   Users logged in:          1
+  Memory usage: 25%               IPv4 address for docker0: 172.17.0.1
+  Swap usage:   0%                IPv4 address for ens5:    172.20.32.165
+
+
+34 updates can be installed immediately.
+14 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+
+Last login: Wed Nov  4 15:08:40 2020 from 13.232.223.145
+ubuntu@master-node:~$ 
+```
 * create a deployment file : [kits-deploy.yaml](https://github.com/blrk/learn-docker.io/blob/master/Kubernetes/kits-deploy.yaml)
 * create a service file : [kits-service.yaml](https://github.com/blrk/learn-docker.io/blob/master/Kubernetes/kits-service.yaml)
 * Apply a configuration to a resource by filename
