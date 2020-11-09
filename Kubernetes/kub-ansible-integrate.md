@@ -43,7 +43,7 @@ kubectl get deploy
 kubectl get service 
 ```
 * How to access our application 
-* wget <kubernetes-Master-IP>:31200
+* wget \<kubernetes-Master-IP\>:31200
 
 
 
