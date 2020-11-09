@@ -18,10 +18,10 @@ cat .ssh/id_rsa.pub
  
   tasks: 
   - name: create a deployment
-    command: kubectl apply -f valaxy-deploy.yml
+    command: kubectl apply -f kits-deploy.yaml
  
   - name: update deployment with new pods if image updated in docker hub
-    command: kubectl rollout restart deployment.v1.apps/valaxy-deployment
+    command: kubectl rollout restart deployment.v1.apps/kits-deploy.yaml
 ```
 * Create a service file
 ``` yaml
@@ -33,7 +33,7 @@ cat .ssh/id_rsa.pub
 
   tasks:
   - name: create a service
-    command: kubectl apply -f valaxy-service.yml
+    command: kubectl apply -f kits-service.yaml
 ```
 * Update hosts file with new group called kubernetes and add kubernetes master in that
 * Check for pods, deployments and services on kubernetes master
