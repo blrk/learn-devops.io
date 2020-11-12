@@ -26,7 +26,17 @@ cat >> .ssh/authorized_keys
 ``` bash
 ssh -i .ssh/id_rsa.pub root@<public-ip-of-master-node(kub-cluster)>
 ```
-* perform the following steps in kub-cluster master node
+* perform the following steps in ansibe server under msadmin user
+* create a directory myapp1 and host file 
+``` bash
+mkdir myapp1
+vi host
+```
+* add the following content in the host file
+``` 
+[kub-cluster]
+13.235.82.178
+```
 * Create the deployment file
 ``` yaml
 ---
