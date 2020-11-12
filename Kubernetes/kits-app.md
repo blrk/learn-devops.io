@@ -24,8 +24,9 @@ cat >> .ssh/authorized_keys
 * verify the password less login
 * fromt the terminal of ansible server perform the following
 ``` bash
-ssh .ssh
+ssh -i .ssh/id_rsa.pub root@<public-ip-of-master-node(kub-cluster)>
 ```
+* perform the following steps in kub-cluster master node
 * create a deployment file : [kits-deploy.yaml](https://github.com/blrk/learn-docker.io/blob/master/Kubernetes/kits-deploy.yaml)
 * create a service file : [kits-service.yaml](https://github.com/blrk/learn-docker.io/blob/master/Kubernetes/kits-service.yaml)
 * Apply a configuration to a resource by filename
