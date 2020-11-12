@@ -28,3 +28,4 @@ NAME           TYPE           CLUSTER-IP      EXTERNAL-IP                       
 kits-service   LoadBalancer   100.66.166.49   a2009b1b2c3ca4ef78cb23b277586798-223794892.ap-south-1.elb.amazonaws.com   8080:31200/TCP   83s
 kubernetes     ClusterIP      100.64.0.1      <none>                                                                    443/TCP          7h25m
 ```
+* Check the status of application http://\<public-ip-of-kub-cluster-master-node\>:31200/webapp/
