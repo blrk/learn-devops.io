@@ -11,7 +11,9 @@
 ``` bash
 ansible-playbook -i /opt/kub/myapp1/host /opt/kub/myapp1/kits-ansible-deploy.yml;
 
-ansible-playbook -i /opt/kub/myapp1/host /opt/kub/myapp1/kits-ansible-service.yml;
+ansible-playbook -i /opt/kub/myapp1/host /opt/kub/myapp1/kits-ansible-service.yml
 ```
+* Click on Apply and Save
+* Note: delete the existing pods and service
 * 
 
