@@ -1,8 +1,13 @@
 ### Create deployment and service using yaml files
-* login to k8-management server
-* Switch as root user
+* login to ansible server
+* Switch as msadmin
 ``` bash
-sudo su -
+sudo msadmin
+```
+* copy the public key of ansible server's msadmin users' public key
+``` bash
+cd .ssh
+cat cat id_rsa.pub
 ```
 * ssh to master node of the cluster
 ``` bash
