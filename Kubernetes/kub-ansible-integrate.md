@@ -5,9 +5,9 @@
 sudo msadmin
 ```
 * Enable password less authentication between ansible server msadmin user and kub-cluster master node.
+* login as msadmin in ansible server
 ``` bash
-cd .ssh
-cat cat id_rsa.pub
+[msadmin@ip-172-31-3-12 .ssh]$ cat id_rsa.pub
 ```
 * copy the printed public key
 * ssh to master node of the cluster
