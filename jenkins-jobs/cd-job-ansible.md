@@ -29,3 +29,6 @@ kits-service   LoadBalancer   100.66.166.49   a2009b1b2c3ca4ef78cb23b277586798-2
 kubernetes     ClusterIP      100.64.0.1      <none>                                                                    443/TCP          7h25m
 ```
 * Check the status of application http://\<public-ip-of-kub-cluster-master-node\>:31200/webapp/
+
+[Back to the mainpage](https://github.com/blrk/learn-devops.io/wiki)
+
