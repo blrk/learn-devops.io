@@ -7,4 +7,11 @@
 * Select Post-build Actions tab
 * In Post-build Actions select : send build artifacts over SSH
 * SSH server name choose : Ansible_server
+* Exec command (Give the ansible palybook command)
+``` bash
+ansible-playbook -i /opt/kub/myapp1/host /opt/kub/myapp1/kits-ansible-deploy.yml;
+
+ansible-playbook -i /opt/kub/myapp1/host /opt/kub/myapp1/kits-ansible-service.yml;
+```
+* 
 
