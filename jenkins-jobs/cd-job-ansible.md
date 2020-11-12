@@ -15,5 +15,16 @@ ansible-playbook -i /opt/kub/myapp1/host /opt/kub/myapp1/kits-ansible-service.ym
 ```
 * Click on Apply and Save
 * Note: delete the existing pods and service
-* 
-
+* Click on Build Now
+* login into the kub-cluster mastern node
+* run the following commands
+``` bash
+ubuntu@ip-172-20-33-17:~/myapp1$ kubectl get pods
+NAME                               READY   STATUS    RESTARTS   AGE
+kits-deployment-8674dd7bd7-clvj7   1/1     Running   0          82s
+kits-deployment-8674dd7bd7-zdljj   1/1     Running   0          82s
+ubuntu@ip-172-20-33-17:~/myapp1$ kubectl get service
+NAME           TYPE           CLUSTER-IP      EXTERNAL-IP                                                               PORT(S)          AGE
+kits-service   LoadBalancer   100.66.166.49   a2009b1b2c3ca4ef78cb23b277586798-223794892.ap-south-1.elb.amazonaws.com   8080:31200/TCP   83s
+kubernetes     ClusterIP      100.64.0.1      <none>                                                                    443/TCP          7h25m
+```
