@@ -64,6 +64,7 @@ kubectl get service
 * How to access our application 
 * wget \<kubernetes-Master-IP\>:31200
 
+[Back to the mainpage](https://github.com/blrk/learn-devops.io/wiki)
 
 
 
