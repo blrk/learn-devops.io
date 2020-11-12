@@ -1,4 +1,4 @@
-### Create Continuous Development Job using Ansible 
+### Create Continuous Deployment Job using Ansible 
 * login to Jenkins dashboard
 * Click on New Item 
 * Enter an item name : Ansible-CD-job
