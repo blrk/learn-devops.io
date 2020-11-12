@@ -13,10 +13,8 @@ sudo msadmin
 * ssh to master node of the cluster
 ``` bash
 root@k8-m-server:~# ssh -i .ssh/id_rsa ubuntu@api.demo.k8s.karunya.edu
-
-sudo su -
 ```
-* then run the following command
+* then run the following command as in kub-cluster master node as ubuntu user
 ``` bash 
 cat >> .ssh/authorized_keys
 ```
@@ -24,10 +22,10 @@ cat >> .ssh/authorized_keys
 * verify the password less login
 * fromt the terminal of ansible server perform the following
 ``` bash
-ssh -i .ssh/id_rsa.pub root@<public-ip-of-master-node(kub-cluster)>
+ssh -i .ssh/id_rsa ubuntu@<public-ip-address-of-kub-cluster-masternode>
 ```
 * perform the following steps in ansibe server under msadmin user
-* create a directory myapp1 and host file 
+* create a directory myapp1 and host file under the /opt/kub directory
 ``` bash
 mkdir myapp1
 vi host
