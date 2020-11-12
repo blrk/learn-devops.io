@@ -64,6 +64,10 @@ vi host
   - name: create a service
     command: kubectl apply -f kits-service.yaml
 ```
+* Ensure that the following files exists in the kub-cluster master node under myapp1 directory
+* deployment file : [kits-deploy.yaml](https://github.com/blrk/learn-docker.io/blob/master/Kubernetes/kits-deploy.yaml)
+* service file : [kits-service.yaml](https://github.com/blrk/learn-docker.io/blob/master/Kubernetes/kits-service.yaml)
+* move to terminal of ansible server
 * Update hosts file with new group called kubernetes and add kubernetes master in that
 * Check for pods, deployments and services on kubernetes master
 ``` bash 
