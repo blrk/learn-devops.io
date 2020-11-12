@@ -4,36 +4,27 @@
 ``` bash
 sudo msadmin
 ```
-* copy the public key of ansible server's msadmin users' public key
+* Enable password less authentication between ansible server msadmin user and kub-cluster master node.
 ``` bash
 cd .ssh
 cat cat id_rsa.pub
 ```
+* copy the printed public key
 * ssh to master node of the cluster
 ``` bash
-ubuntu@k8-m-server:~$ sudo su -
 root@k8-m-server:~# ssh -i .ssh/id_rsa ubuntu@api.demo.k8s.karunya.edu
-Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-1028-aws x86_64)
 
- * Documentation:  https://help.ubuntu.com
- * Management:     https://landscape.canonical.com
- * Support:        https://ubuntu.com/advantage
-
-  System information as of Wed Nov  4 15:20:49 UTC 2020
-
-  System load:  0.04              Processes:                164
-  Usage of /:   6.5% of 61.98GB   Users logged in:          1
-  Memory usage: 25%               IPv4 address for docker0: 172.17.0.1
-  Swap usage:   0%                IPv4 address for ens5:    172.20.32.165
-
-
-34 updates can be installed immediately.
-14 of these updates are security updates.
-To see these additional updates run: apt list --upgradable
-
-
-Last login: Wed Nov  4 15:08:40 2020 from 13.232.223.145
-ubuntu@master-node:~$ 
+sudo su -
+```
+* then run the following command
+``` bash 
+cat >> .ssh/authorized_keys
+```
+* now paste the copied public key and press ctrl + d
+* verify the password less login
+* fromt the terminal of ansible server perform the following
+``` bash
+ssh .ssh
 ```
 * create a deployment file : [kits-deploy.yaml](https://github.com/blrk/learn-docker.io/blob/master/Kubernetes/kits-deploy.yaml)
 * create a service file : [kits-service.yaml](https://github.com/blrk/learn-docker.io/blob/master/Kubernetes/kits-service.yaml)
