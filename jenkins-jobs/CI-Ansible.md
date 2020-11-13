@@ -2,5 +2,8 @@
 * Login into Jenkins dashboard
 * Click on New Item
 * Enter an item name : Ansible-CI-job
-* Copy from : Ansible-CI-job
-* 
+* Copy from : Deploy-on-Docker-through-Ansible (git source added, PollSCM enabled, Post-build Actions on Ansible server, Exec command - to run the ansible playbook that create and push an image into docker hub)
+* Click apply and Save
+* Automatically build the job
+* Check the status of the job 
+* Verify the docker hub for new image push 
