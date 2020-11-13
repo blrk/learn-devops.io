@@ -7,3 +7,5 @@
 * Automatically build the job
 * Check the status of the job 
 * Verify the docker hub for new image push 
+* Note: Inspect the ansible playbook you can understand that the images are build using /opt/docker. 
+* Task: do the necessary steps to build the image in /opt/kub directory (exee command need correct path in Jenkins job)
