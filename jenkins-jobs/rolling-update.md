@@ -14,6 +14,13 @@ strategy:
       maxSurge: 1
       maxUnavailable: 1
 ```
+* remove all the existing pods and service
+* edit the git hub repo
+* you can see the reflection in the running app website 
+
+[Back to the mainpage](https://github.com/blrk/learn-devops.io/wiki)
+
+
 
 
 
