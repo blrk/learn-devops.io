@@ -14,6 +14,8 @@ strategy:
       maxSurge: 1
       maxUnavailable: 1
 ```
+* Rolling updates allow Deployments' update to take place with zero downtime by incrementally updating Pods instances with new ones. 
+* Learn more Rolling update [Click Here](https://kubernetes.io/docs/tutorials/kubernetes-basics/update/update-intro/)
 * remove all the existing pods and service
 * edit the git hub repo
 * you can see the reflection in the running app website 
