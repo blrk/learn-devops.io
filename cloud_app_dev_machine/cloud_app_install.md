@@ -52,5 +52,26 @@ See "man sudo_root" for details.
 
 blrk@cloud_app:~$ 
 ```
+* update the VM
+``` bash
+# Install git
+``` bash
+blrk@cloud_app:~$ sudo apt install git -y
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+git is already the newest version (1:2.17.1-1ubuntu0.8).
+0 upgraded, 0 newly installed, 0 to remove and 64 not upgraded.
+```
+* Git installed by default
+# Check Python installation
+``` bash
+blrk@cloud_app:~$ python3
+Python 3.6.9 (default, Jan 26 2021, 15:33:00) 
+[GCC 8.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 
+```
+* if not installed download and install from [Download from this link](https://www.python.org/downloads/)
 
 
