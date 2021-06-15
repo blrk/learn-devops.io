@@ -1,5 +1,5 @@
 # Install ubuntu Server (as VM in KVM)
-* Ubuntu 18.04.5 LTS Server
+* Ubuntu Server 18.04.5 LTS (Bionic Beaver)
 * [Download from this link](https://releases.ubuntu.com/18.04/ubuntu-18.04.5-live-server-amd64.iso)
 * During installation enable ssh option and create one user
 * After successful installation, login into the VM and get the ip addessing using "ip a" command
@@ -73,5 +73,61 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> 
 ```
 * if not installed download and install from [Download from this link](https://www.python.org/downloads/)
+# Install Docker (Install using the repository)
+* Update the apt package index and install packages to allow apt to use a repository over HTTPS:
+``` bash
+blrk@cloud_app:~$ sudo apt-get update
+Hit:1 http://in.archive.ubuntu.com/ubuntu bionic InRelease
+Hit:2 http://in.archive.ubuntu.com/ubuntu bionic-updates InRelease
+Hit:3 http://in.archive.ubuntu.com/ubuntu bionic-backports InRelease
+Hit:4 http://in.archive.ubuntu.com/ubuntu bionic-security InRelease
+Reading package lists... Done
+```
+``` bash
+blrk@cloud_app:~$ sudo apt-get install \
+>     apt-transport-https \
+>     ca-certificates \
+>     curl \
+>     gnupg \
+>     lsb-release
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+lsb-release is already the newest version (9.20170808ubuntu1).
+lsb-release set to manually installed.
+ca-certificates is already the newest version (20210119~18.04.1).
+ca-certificates set to manually installed.
+curl is already the newest version (7.58.0-2ubuntu3.13).
+curl set to manually installed.
+The following additional packages will be installed:
+  dirmngr gnupg-l10n gnupg-utils gpg gpg-agent gpg-wks-client gpg-wks-server
+  gpgconf gpgsm gpgv
+Suggested packages:
+  dbus-user-session pinentry-gnome3 tor parcimonie xloadimage scdaemon
+The following NEW packages will be installed:
+  apt-transport-https
+The following packages will be upgraded:
+  dirmngr gnupg gnupg-l10n gnupg-utils gpg gpg-agent gpg-wks-client
+  gpg-wks-server gpgconf gpgsm gpgv
+11 upgraded, 1 newly installed, 0 to remove and 53 not upgraded.
+Need to get 2,152 kB of archives.
+After this operation, 154 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+``` 
+* Add Docker’s official GPG key:
+``` bash
+blrk@cloud_app:~$ sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+gpg: WARNING: unsafe ownership on homedir '/home/blrk/.gnupg'
+File '/usr/share/keyrings/docker-archive-keyring.gpg' exists. Overwrite? (y/N) y
+```
+* Use the following command to set up the stable repository. To add the nightly or test repository, add the word nightly or test (or both) after the word stable in the commands below. Learn about nightly and test channels.
+``` bash
+echo \
+  "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+```
+
+
+
 
 
