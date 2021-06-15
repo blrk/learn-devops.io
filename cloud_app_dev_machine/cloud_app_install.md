@@ -126,7 +126,50 @@ echo \
   "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
+* Install Docker Engine
+``` bash
+blrk@cloud_app:~$ sudo apt-get update
+Hit:1 http://in.archive.ubuntu.com/ubuntu bionic InRelease
+Hit:2 http://in.archive.ubuntu.com/ubuntu bionic-updates InRelease             
+Get:3 https://download.docker.com/linux/ubuntu bionic InRelease [64.4 kB]      
+Hit:4 http://in.archive.ubuntu.com/ubuntu bionic-backports InRelease           
+Hit:5 http://in.archive.ubuntu.com/ubuntu bionic-security InRelease            
+Get:6 https://download.docker.com/linux/ubuntu bionic/stable amd64 Packages [18.8 kB]
+Fetched 83.3 kB in 1s (118 kB/s)                         
+Reading package lists... Done
+```
+``` bash
+blrk@cloud_app:~$ sudo apt-get install docker-ce docker-ce-cli containerd.io
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  docker-ce-rootless-extras docker-scan-plugin libltdl7 pigz
+Suggested packages:
+  aufs-tools cgroupfs-mount | cgroup-lite
+Recommended packages:
+  slirp4netns
+The following NEW packages will be installed:
+  containerd.io docker-ce docker-ce-cli docker-ce-rootless-extras
+  docker-scan-plugin libltdl7 pigz
+0 upgraded, 7 newly installed, 0 to remove and 53 not upgraded.
+Need to get 108 MB of archives.
+After this operation, 466 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+```
+* Check the docker installation
+``` bash
+blrk@cloud_app:~$ sudo docker run hello-world
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+b8dfde127a29: Pull complete 
+Digest: sha256:9f6ad537c5132bcce57f7a0a20e317228d382c3cd61edae14650eec68b2b345c
+Status: Downloaded newer image for hello-world:latest
 
+Hello from Docker!
+```
+* docker installation successful
+# Install Vagrant
 
 
 
