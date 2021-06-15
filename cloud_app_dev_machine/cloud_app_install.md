@@ -169,8 +169,55 @@ Status: Downloaded newer image for hello-world:latest
 Hello from Docker!
 ```
 * docker installation successful
+* Add prvilage to the user to run docker 
+``` bash
+sudo usermod -aG docker $USER
+```
+* logout and login again
+* run the command "docker run hello-world"
 # Install Vagrant
-
+``` bash
+blrk@cloud_app:~$ curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+[sudo] password for blrk: 
+OK
+```
+``` bash
+blrk@cloud_app:~$ sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+Hit:1 http://in.archive.ubuntu.com/ubuntu bionic InRelease
+Hit:2 https://download.docker.com/linux/ubuntu bionic InRelease               
+Hit:3 http://in.archive.ubuntu.com/ubuntu bionic-updates InRelease            
+Hit:4 http://in.archive.ubuntu.com/ubuntu bionic-backports InRelease          
+Get:5 https://apt.releases.hashicorp.com bionic InRelease [4,421 B]           
+Hit:6 http://in.archive.ubuntu.com/ubuntu bionic-security InRelease           
+Get:7 https://apt.releases.hashicorp.com bionic/main amd64 Packages [25.6 kB]
+Fetched 30.1 kB in 2s (16.3 kB/s)                             
+Reading package lists... Done
+```
+``` bash
+blrk@cloud_app:~$ sudo apt-get update && sudo apt-get install vagrant
+Hit:1 http://in.archive.ubuntu.com/ubuntu bionic InRelease
+Hit:2 http://in.archive.ubuntu.com/ubuntu bionic-updates InRelease            
+Hit:3 https://download.docker.com/linux/ubuntu bionic InRelease               
+Hit:4 http://in.archive.ubuntu.com/ubuntu bionic-backports InRelease          
+Hit:5 https://apt.releases.hashicorp.com bionic InRelease                     
+Hit:6 http://in.archive.ubuntu.com/ubuntu bionic-security InRelease           
+Reading package lists... Done                     
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following NEW packages will be installed:
+  vagrant
+0 upgraded, 1 newly installed, 0 to remove and 53 not upgraded.
+Need to get 40.9 MB of archives.
+After this operation, 115 MB of additional disk space will be used.
+Get:1 https://apt.releases.hashicorp.com bionic/main amd64 vagrant amd64 2.2.16 [40.9 MB]
+Fetched 40.9 MB in 23s (1,759 kB/s)                                           
+Selecting previously unselected package vagrant.
+(Reading database ... 67400 files and directories currently installed.)
+Preparing to unpack .../vagrant_2.2.16_amd64.deb ...
+Unpacking vagrant (2.2.16) ...
+Setting up vagrant (2.2.16) ...
+```
 
 
 
