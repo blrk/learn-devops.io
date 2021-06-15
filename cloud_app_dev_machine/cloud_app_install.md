@@ -218,6 +218,49 @@ Preparing to unpack .../vagrant_2.2.16_amd64.deb ...
 Unpacking vagrant (2.2.16) ...
 Setting up vagrant (2.2.16) ...
 ```
+# Install VirtualBox 6.1
+* Setup Apt Repository
+``` bash
+blrk@cloud_app:~$ wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+OK
 
+blrk@cloud_app:~$ wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
+OK
+```
+* Add Oracle VirtualBox PPA to Ubuntu system
+``` bash
+blrk@cloud_app:~$ sudo add-apt-repository "deb http://download.virtualbox.org/virtualbox/debian bionic contrib"
+Hit:1 http://in.archive.ubuntu.com/ubuntu bionic InRelease
+Hit:2 http://download.virtualbox.org/virtualbox/debian bionic InRelease       
+Hit:3 http://in.archive.ubuntu.com/ubuntu bionic-updates InRelease            
+Hit:4 https://download.docker.com/linux/ubuntu bionic InRelease               
+Hit:5 http://in.archive.ubuntu.com/ubuntu bionic-backports InRelease          
+Hit:6 http://in.archive.ubuntu.com/ubuntu bionic-security InRelease           
+Hit:7 https://apt.releases.hashicorp.com bionic InRelease
+Reading package lists... Done      
+```
+* Install VirtualBox on Ubuntu 
+``` bash
+blrk@cloud_app:~$ sudo apt update
+Hit:1 http://download.virtualbox.org/virtualbox/debian bionic InRelease
+Hit:2 https://download.docker.com/linux/ubuntu bionic InRelease               
+Hit:3 http://in.archive.ubuntu.com/ubuntu bionic InRelease                    
+Hit:4 http://in.archive.ubuntu.com/ubuntu bionic-updates InRelease            
+Hit:5 http://in.archive.ubuntu.com/ubuntu bionic-backports InRelease          
+Hit:6 http://in.archive.ubuntu.com/ubuntu bionic-security InRelease      
+Hit:7 https://apt.releases.hashicorp.com bionic InRelease               
+Reading package lists... Done                      
+Building dependency tree       
+Reading state information... Done
+52 packages can be upgraded. Run 'apt list --upgradable' to see them.
+```
+``` bash
+blrk@cloud_app:~$ sudo apt install virtualbox-6.1
+```
+* Check the installation of virtualbox
+``` bash
+blrk@cloud_app:~$ vboxmanage --version
+6.1.22r144080
+```
 
 
