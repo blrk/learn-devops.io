@@ -15,8 +15,9 @@ PING 192.168.122.83 (192.168.122.83) 56(84) bytes of data.
 --- 192.168.122.83 ping statistics ---
 4 packets transmitted, 4 received, 0% packet loss, time 3051ms
 rtt min/avg/max/mdev = 0.305/0.356/0.402/0.045 ms
-'''
+```
 * Login into to the VM using ssh
+
 ``` bash
 blrk@lpc:~> ssh blrk@192.168.122.83
 The authenticity of host '192.168.122.83 (192.168.122.83)' can't be established.
