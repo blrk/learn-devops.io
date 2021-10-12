@@ -1,4 +1,4 @@
-### Integerate DockerHub with Ansible
+### Integrate DockerHub with Ansible
 * login into the Ansible server
 * List all the images
 ``` bash
